@@ -17783,8 +17783,8 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>Sportsbook occasionally offer promotions that offer users risk-free bets. A risk-free bet is one that pays out normally if it wins, but rewards you with a free bet equal to the size of your losing bet in the case you lose.</p>
 <p>A free bet is one that rewards you with the profit of a bet, but not the principal. Implied by the name, if you lose a free bet, you don't actually lose any money.</p>
-<p>While there is a well-defined way to maximize the rewards for the free bet you receive (<a href="https://oddsjam.com/betting-tools/free-bet-converter">Oddsjam</a>), I was unable to find resources on how to maximize risk-free bets. I will explore one strategy in this notebook that relies on two sportsbook offering risk-free bets, and using them in conjunction to guarantee a profit.</p>
-<p>This is how I made $718.13 without risking a single dollar</p>
+<p>While there is a well-defined way to maximize the rewards for the free bet you receive (<a href="https://oddsjam.com/betting-calculators/free-bet-conversion">Oddsjam</a>), I was unable to find resources on how to maximize risk-free bets. I will explore one strategy in this notebook that relies on two sportsbook offering risk-free bets, and using them in conjunction to guarantee a profit.</p>
+<p>This is how I made \$718.13 without risking a single dollar</p>
 
 </div>
 </div>
@@ -17809,20 +17809,20 @@ a.anchor-link {
 <h3 id="Setup">Setup<a class="anchor-link" href="#Setup">&#182;</a></h3><p>To maximize the risk-free bet, we will work backwards and first solve for how to maximize the free bet. To make the notion of a free bet more concrete, here is an example of how a free bet pays off.</p>
 <p>Ex:</p>
 <ul>
-<li>Suppose we have a $1000 free bet</li>
-<li>Assume we place our $1000 free bet on a bet with +150 odds<ul>
-<li>If we win, we win $1500</li>
+<li>Suppose we have a \$1000 free bet</li>
+<li>Assume we place our \$1000 free bet on a bet with +150 odds<ul>
+<li>If we win, we win \$1500. A traditional bet would have rewarded us a total of \$2500, which includes the bet principal.</li>
 <li>If we lose, our account balance stays the same</li>
 </ul>
 </li>
 </ul>
-<p>More genearlly, we want to know how to maximize a free bet of \$f. To maximize our minimum winnings, the free bet should be used on the underdog, with a hedge on the other side of the bet using a different sportsbook.</p>
+<p>More generally, we want to know how to maximize a free bet of \$f. To maximize our minimum winnings, the free bet should be used on the underdog, with a hedge on the other side of the bet using a different sportsbook.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Bettor-Choices">Bettor Choices<a class="anchor-link" href="#Bettor-Choices">&#182;</a></h3><p>A bettor must decide at what odds to place their bet ($+a$ and $-b$) and how big their hedge (\$ $H$) should be. Note that since we can't lose money with free bets, the maximum free bet amount should be wagered.</p>
+<h3 id="Bettor-Choices">Bettor Choices<a class="anchor-link" href="#Bettor-Choices">&#182;</a></h3><p>A bettor must decide at what odds to place their bet (+a and -b) and how big their hedge (\$H) should be. Note that since we can't lose money with free bets, the maximum free bet amount should be wagered.</p>
 
 </div>
 </div>
@@ -17836,7 +17836,7 @@ a.anchor-link {
   $$\text{profit} = \frac{100H}{b}$$</p>
 </li>
 </ul>
-<p>To maximize our minimum reward, we will set the profits in both scenarios equal. Solving for $H$ yields
+<p>To maximize our minimum reward, we will set the profits in both scenarios equal. Solving for H yields
     $$H = \frac{abf}{100(100+b)}$$</p>
 <p>This guarantees a profit of
     $$\text{profit} = \frac{af}{100 + b}$$</p>
@@ -18023,7 +18023,7 @@ The optimal hedge size is $1,416.67 and guarantees $833.33 in profit
 </ul>
 <p><strong>Takeaways</strong></p>
 <ul>
-<li>As odds get longer, the hedge bet becomes prohibitively expensive (Upwards of $5000)</li>
+<li>As odds get longer, the hedge bet becomes prohibitively expensive (Upwards of \$5000)</li>
 <li>Bigger profits require bigger hedges</li>
 </ul>
 
@@ -18045,20 +18045,20 @@ The optimal hedge size is $1,416.67 and guarantees $833.33 in profit
 <h3 id="Setup">Setup<a class="anchor-link" href="#Setup">&#182;</a></h3><p>Now that we know how much we can expect to receive from a free bet, we can calculate the optimal strategy for our risk-free bet. First, lets run through a quick example of the potential outcomes of a risk-free bet</p>
 <p>Ex:</p>
 <ul>
-<li>Suppose we have a $1000 risk-free bet</li>
-<li>Assume we place our $1000 risk-free bet on a bet with +150 odds<ul>
-<li>If we win, we win $2500. This is a net of $1500 profit.</li>
-<li>If we lose, we lose $1000 and receive a $1000 free bet</li>
+<li>Suppose we have a \$1000 risk-free bet</li>
+<li>Assume we place our \$1000 risk-free bet on a bet with +150 odds<ul>
+<li>If we win, we win \$2500. This is a net of \$1500 profit.</li>
+<li>If we lose, we lose \$1000 and receive a \$1000 free bet</li>
 </ul>
 </li>
 </ul>
-<p>We want to maximize a risk-free bet of \$f. Again, we will want to use the risk-free bet should on the underdog, with a hedge on the other side of the bet using a different sportsbook.</p>
+<p>We want to maximize a risk-free bet of \$r. Again, we will want to use the risk-free bet should on the underdog, with a hedge on the other side of the bet using a different sportsbook.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Bettor-Choices">Bettor Choices<a class="anchor-link" href="#Bettor-Choices">&#182;</a></h3><p>A bettor must decide what bet sizes to use ($b_1$ and $b_2$) and at what odds ($+a$ and $-b$). To guarantee profit, we will take both sides of a bet using two risk-free bets on different sportsbooks, so we guarantee one of the bets will win. Since we <em>can</em> lose money with free bets, it's not always the best idea to bet the risk-free bet limit.</p>
+<h3 id="Bettor-Choices">Bettor Choices<a class="anchor-link" href="#Bettor-Choices">&#182;</a></h3><p>A bettor must decide what bet sizes to use ($b_1$ and $b_2$) and at what odds (+a and -b). To guarantee profit, we will take both sides of a bet using two risk-free bets on different sportsbooks, so we guarantee one of the bets will win. Since we <em>can</em> lose money with free bets, it's not always the best idea to bet the risk-free bet limit.</p>
 
 </div>
 </div>
@@ -18072,11 +18072,11 @@ The optimal hedge size is $1,416.67 and guarantees $833.33 in profit
   $$\frac{100b_2}{b} + f(b_1) - b_1$$</p>
 </li>
 </ul>
-<p><strong>Note:</strong> $f(x)$ represents the profit we receive from a free bet of size $x.</p>
+<p><strong>Note:</strong> $f(x)$ represents the profit we receive from a free bet of size \$x.</p>
 <p>To maximize our minimum gain, we will set the two profits for each possible outcome equal to each other. This yields the formula</p>
 $$\frac{ab_1}{100} + f(b_2) - b_2 = \frac{100b_2}{b} + f(b_1) - b_1$$<p>If we assume that we can convert our free bet at a rate of $C$ so that $f(x) = Cx$, then we can solve for $b_1$</p>
-$$b_1 = \frac{100(100+b(1-C))}{b(a+100(1-C))}b_2$$<p>But since the risk-free bet limit is $1000 for Sportsbook A (the book we're making the bet $b_1$ on), we must cap the bet. The formula for $b_1$ now becomes</p>
-$$b_1 = \min\left\{\frac{100(100+b(1-C))}{b(a+100(1-C))}b_2, ~ 1000\right\}$$<p>Choosing a $b_2$ that makes the optimal bet go over $1000 is bad. That is because a part of our bet on Sportsbook B will go unhedged. Thus, we should always aim to get $b_1 = 1000$. Similarly, if the bet $b_2$ needed to make $b_1 = 1000$ is greater than $1500, we will want to cap $b_2$ to be $1500. In this case, $b_1$ will be less than $1000.</p>
+$$b_1 = \frac{100(100+b(1-C))}{b(a+100(1-C))}b_2$$<p>But since the risk-free bet limit is \$1000 for Sportsbook A (the book we're making the bet $b_1$ on), we must cap the bet. The formula for $b_1$ now becomes</p>
+$$b_1 = \min\left\{\frac{100(100+b(1-C))}{b(a+100(1-C))}b_2, ~ 1000\right\}$$<p>Choosing a $b_2$ that makes the optimal bet go over \$1000 is bad. That is because a part of our bet on Sportsbook B will go unhedged. Thus, we should always aim to get $b_1 = 1000$. Similarly, if the bet $b_2$ needed to make $b_1 = 1000$ is greater than \$1500, we will want to cap $b_2$ to be \$1500. In this case, $b_1$ will be less than \$1000.</p>
 <p>Choosing bet sizes for $b_1$ and $b_2$ within the limits then yields a profit of</p>
 $$\text{profit} = \frac{ab_1}{100} + b_2(C-1)$$<p>Assuming that this overall strategy is profitable (which will turn out to be a good assumption), we see that it is strictly better to make $b_2$ as large as possible. If we instead solved in terms of $b_1$, we would come to this same conclusion. So at least one of $b_1$ and $b_2$ will be at the risk-free bet limit. Here are the accompanying calculations for if we choose $b_1$ instead</p>
 $$b_2 = \min\left\{\frac{b(a + 100(1-C))}{100(100 + b(1-C))}b_1, ~ 1500 \right\}$$$$\text{profit} = \frac{100b_2}{b} + b_1(C-1)$$
@@ -18107,12 +18107,12 @@ $$b_2 = \min\left\{\frac{b(a + 100(1-C))}{100(100 + b(1-C))}b_1, ~ 1500 \right\}
 <span class="k">def</span> <span class="nf">p2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">b2</span> <span class="o">/</span> <span class="n">b</span> <span class="o">+</span> <span class="n">b1</span> <span class="o">*</span> <span class="p">(</span><span class="n">C</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">profit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">profit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">r1</span><span class="p">,</span> <span class="n">r2</span><span class="p">):</span>
     <span class="n">bet1</span> <span class="o">=</span> <span class="n">b1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span>
     <span class="n">bet2</span> <span class="o">=</span> <span class="n">b2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span>
 
-    <span class="n">profit1</span> <span class="o">=</span> <span class="n">p1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">bet2</span><span class="p">)</span>
-    <span class="n">profit2</span> <span class="o">=</span> <span class="n">p2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">bet1</span><span class="p">,</span> <span class="mi">1500</span><span class="p">)</span>
+    <span class="n">profit1</span> <span class="o">=</span> <span class="n">p1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">r1</span><span class="p">,</span> <span class="n">bet2</span><span class="p">)</span>
+    <span class="n">profit2</span> <span class="o">=</span> <span class="n">p2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">bet1</span><span class="p">,</span> <span class="n">r2</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">minimum</span><span class="p">(</span><span class="n">profit1</span><span class="p">,</span> <span class="n">profit2</span><span class="p">)</span>
 </pre></div>
@@ -18134,16 +18134,17 @@ $$b_2 = \min\left\{\frac{b(a + 100(1-C))}{100(100 + b(1-C))}b_1, ~ 1500 \right\}
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">b1</span><span class="p">,</span> <span class="n">b2</span> <span class="o">=</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1500</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">r1</span><span class="p">,</span> <span class="n">r2</span> <span class="o">=</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1500</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Assume a bettor has 2 risk-free bets of $</span><span class="si">{</span><span class="n">b1</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> and $</span><span class="si">{</span><span class="n">b2</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">, and takes both sides of a +</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> and -</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> bet&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Assume a bettor has 2 risk-free bets of $</span><span class="si">{</span><span class="n">r1</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> and $</span><span class="si">{</span><span class="n">r2</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">, and takes both sides of a +</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> and -</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> bet&quot;</span><span class="p">)</span>
 
 <span class="n">bet1</span> <span class="o">=</span> <span class="n">b1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span>
 <span class="n">bet2</span> <span class="o">=</span> <span class="n">b2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span>
 
+<span class="n">bets</span> <span class="o">=</span> <span class="p">(</span><span class="n">bet1</span><span class="p">,</span> <span class="mi">1500</span><span class="p">)</span> <span class="k">if</span> <span class="n">bet1</span> <span class="o">&lt;=</span> <span class="mi">1000</span> <span class="k">else</span> <span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">bet2</span><span class="p">)</span>
+<span class="n">prof</span> <span class="o">=</span> <span class="n">profit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">r1</span><span class="p">,</span> <span class="n">r2</span><span class="p">)</span>
 
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The optimal hedge size is $</span><span class="si">{</span><span class="n">h</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> and guarantees $</span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> in profit&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The optimal bet sizings are $</span><span class="si">{</span><span class="n">bets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> and $</span><span class="si">{</span><span class="n">bets</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> and guarantees $</span><span class="si">{</span><span class="n">prof</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> in profit&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -18164,7 +18165,7 @@ $$b_2 = \min\left\{\frac{b(a + 100(1-C))}{100(100 + b(1-C))}b_1, ~ 1500 \right\}
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Assume a bettor has 2 risk-free bets of $1,000 and $1,500, and takes both sides of a +150 and -170 bet
-The optimal hedge size is $1,416.67 and guarantees $833.33 in profit
+The optimal bet sizings are $760.73 and $1,500.00 and guarantees $616.10 in profit
 </pre>
 </div>
 </div>
@@ -18179,10 +18180,7 @@ The optimal hedge size is $1,416.67 and guarantees $833.33 in profit
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># free bet conversion rate</span>
-<span class="n">C</span> <span class="o">=</span> <span class="mf">0.65</span>
-
-<span class="n">odds_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">180.0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">odds_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">180.0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
   
 <span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">odds_range</span><span class="p">,</span> <span class="n">odds_range</span><span class="p">)</span>
 
@@ -18196,9 +18194,9 @@ The optimal hedge size is $1,416.67 and guarantees $833.33 in profit
 <span class="c1"># option where we set bet 1 to $1000</span>
 <span class="n">bet2</span> <span class="o">=</span> <span class="n">b2</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span>
 
-<span class="n">profits</span> <span class="o">=</span> <span class="n">profit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">)</span>
+<span class="n">profits</span> <span class="o">=</span> <span class="n">profit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">r1</span><span class="p">,</span> <span class="n">r2</span><span class="p">)</span>
 
-<span class="n">h1</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">bet1</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">1000</span><span class="p">))</span>
+<span class="n">h1</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">bet1</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">r1</span><span class="p">))</span>
 
 <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Bet 1 Size vs Odds Chosen&#39;</span><span class="p">)</span>
 <span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;underdog odds&#39;</span><span class="p">)</span>
@@ -18207,7 +18205,7 @@ The optimal hedge size is $1,416.67 and guarantees $833.33 in profit
 <span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;square&#39;</span><span class="p">)</span>
 <span class="n">ax1</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
 
-<span class="n">h2</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">bet2</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">1500</span><span class="p">))</span>
+<span class="n">h2</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">bet2</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">r2</span><span class="p">))</span>
 
 <span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Bet 2 Size vs Odds Chosen&#39;</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;underdog odds&#39;</span><span class="p">)</span>
@@ -18266,13 +18264,13 @@ The optimal hedge size is $1,416.67 and guarantees $833.33 in profit
 <li>Left Chart<ul>
 <li>X-axis plots the underdog odds (+a), Y-axis plots the favorite odds (-b), color represents optimal $b_1$ bet size when $b_2 = 1500$</li>
 <li>Lighter colors represent bigger bets on Sportsbook A</li>
-<li>The solid mustard color block represents the bet pairs where you should max out $b_1$ to be $1500, and maxing out $b_2$ is not the best decision</li>
+<li>The solid mustard color block represents the bet pairs where you should max out $b_1$ to be \$1500, and maxing out $b_2$ is not the best decision</li>
 </ul>
 </li>
 <li>Middle Chart<ul>
 <li>X-axis plots the underdog odds (+a), Y-axis plots the favorite odds (-b), color represents optimal $b_2$ bet size when $b_1 = 1000$</li>
 <li>Lighter colors represent bigger bets on Sportsbook B</li>
-<li>The solid mustard color block represents the bet pairs where you should max out $b_2$ to be $1000, and maxing out $b_1$ is not the best decision</li>
+<li>The solid mustard color block represents the bet pairs where you should max out $b_2$ to be \$1000, and maxing out $b_1$ is not the best decision</li>
 </ul>
 </li>
 <li>Right Chart<ul>
@@ -18284,7 +18282,59 @@ The optimal hedge size is $1,416.67 and guarantees $833.33 in profit
 <p><strong>Takeaways</strong></p>
 <ul>
 <li>Always maximize one of your risk-free bets</li>
-<li>The best risk-free bet pairing is around +130 and -135. This corresponds to an guaranteed profit just shy of $800</li>
+<li>The best risk-free bet pairing is around +130 and -135. This corresponds to an guaranteed profit just shy of \$800</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="How-I-made-%5C$718.13">How I made \$718.13<a class="anchor-link" href="#How-I-made-%5C$718.13">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ol>
+<li>Risk-Free Bets<ul>
+<li>I bet \$945 at +130 and \$1500 at -145</li>
+<li>the +130 bet won, so I netted -\$271.50 and a \$1500 free bet</li>
+</ul>
+</li>
+<li>Free Bets<ul>
+<li>I bet the \$1500 free bet at +330 and hedged this bet with \$3958.50 at -400</li>
+<li>The hedge bet won, so I netted \$989.63 in this round</li>
+</ul>
+</li>
+<li>Net Transactions<ul>
+<li>Total Deposits: \$4250<ul>
+<li>MGM: \$1500</li>
+<li>Caesars: \$2750</li>
+</ul>
+</li>
+<li>Total Withdrawals: \$4968.13<ul>
+<li>MGM: \$4968.13</li>
+<li>Caesars: \$0</li>
+</ul>
+</li>
+<li>Net Profit: \$718.13</li>
+</ul>
+</li>
+</ol>
+<p><strong>Note:</strong> I included pictures as proof in the img/ directory. MGM doesn't give a detailed history, but we can recover the odds that I bet at by looking at how much I won.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Things-to-keep-in-Mind">Things to keep in Mind<a class="anchor-link" href="#Things-to-keep-in-Mind">&#182;</a></h2><ul>
+<li>When betting both sides of an event, make sure the event cannot push. Most sportsbooks don't credit free bets in this case. <ul>
+<li>Ex: If you're betting on baseball spreads, bet on +4.5 instead of +4. +4 can sometimes push, but pushing on +4.5 is impossible</li>
+</ul>
+</li>
+<li>Free bets expire. Typically you have 2 weeks to use a free bet so it should be more than enough time to find a good betting opportunity, but make sure it doesn't expire.</li>
+<li>You probably won't find the dream set up, when you see a decent opportunity, go for it</li>
+<li>Risk-Free bets are only valid for first time users of the sportsbooks</li>
+<li>Make sure you sign up using a valid link that credits you with the risk-free bet promotion. If you sign up with this link for <a href="https://www.ny.betmgm.com/en/mobileportal/invitefriendssignup?invID=22636899">MGM</a> we both get \$50, and this link for [Caesars](https://www.caesars.com/sportsbook-and-casino/referral?AR=NY8059105283&amp;pid=czrs&amp;utm_source=czrs&amp;utm_medium=creferral&amp;c=creferral&amp;utm_campaign=NY8059105283) and I get a \$100 free bet that I will split the profits with you with (E.V. $\approx$ \$32.50)!</li>
 </ul>
 
 </div>
